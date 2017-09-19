@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../static/css/login.css" />
+		<title>login</title>
+
+	</head>
+
+	<body class="login">
+		<div class="container">
+			<div class="login-main">
+				<div class="login-logo"></div>
+				<div class="login-form clearfix">
+					<div class="form-list">
+						<div class="item clearfix">
+							<div class="avatar iconfont icon-touxiang"></div>
+							<input id="userNum" name="userNum" type="number"  placeholder="请输入你的手机号" />
+							<div id="purge" onclick="purge('userNum');" class="purge iconfont icon-qingchu"></div>
+						</div>
+						<div class="item clearfix">
+							<div class="avatar iconfont icon-loginpassword"></div>
+							<input id="userPwd" name="userPwd" type="password" placeholder="请输入你的密码" /><div class="purge"></div>
+						    
+						</div>
+						<div class="validate">
+							<input id="userVal"  placeholder="验证码" maxlength="4"/>
+							<img id="validate" src="../static/img/yzm.jpg" style="margin-left:10px ;"/>
+						</div>
+						<div class="entry">
+							<button type="button" id="entry" class="disabled">登录</button>
+						</div>
+						<div class="pwd">
+							<input style="width: auto; float: left;" type="checkbox" name="checkbox1" value="checkbox">
+							<span>记住密码</span>
+							<span style="float: right;">忘记密码</span>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div class="login-pop">
+				<div class="container" style="width: 470px" >
+					<div class="popBox clearfix">
+						<div class="title">重置密码<span class="iconfont icon-cuowu"></span></div>
+						<ul class="step clearfix">
+							<li>①输入手机号</li>
+							<li>②输入验证码</li>
+							<li>③重置密码</li>
+						</ul>
+						<div class="popForm" >
+							<div class="popForm-item active">
+							    <p>账号：</p><input type="text" placeholder="请输入你的账号"/>
+							</div>
+							<div class="popForm-item active" style="position: relative;">
+							    <p>手机号：</p><input placeholder="请输入你的手机号"></input><i class="iconfont icon-qingchu"></i>
+							</div>
+							<div class="popForm-item active">    
+							    <p>验证码：</p><input placeholder="验证码" style="width: 90px;"/>
+							    <img  src="../static/img/yzm.jpg"/>
+							</div>
+							<div class="popForm-item" style="position: relative;">
+							    <p>新密码：</p><input placeholder="新密码"></input>
+							</div>
+							<div class="popForm-item" style="position: relative;">
+							    <p>重复密码：</p><input placeholder="重复密码"></input>
+							</div>
+						</div>
+						<div class="popUpDown" >
+							<button class="down">下一步</button>
+							<button class="fulfil" style="float: right;">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="login-pop">
+				<div class="container" style="388px">
+					<div class="popBox clearfix" style="margin-top: 252px;">
+						<div class="title">绑定手机号<span class="iconfont icon-cuowu"></span></div>
+						<div class="header">首次登陆请绑定手机号，用于找回密码</div>
+						<div class="popForm" >
+						    <div class="popForm-item active" style="position: relative;">
+							    <p>手机号码</p><input placeholder="请输入正确的手机号"></input>
+						    </div>
+						    <div class="popForm-item active">    
+							    <p>验证码</p><input placeholder="请输入验证码" style="width: 90px;"/>
+							    <button >发送验证码</button>
+						    </div>
+						</div>
+						<div class="popUpDown" style="margin:40px 0 24px 60px ;">
+							<button class="confirm">完成</button>
+							<button class="fulfil" style="float: right;">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="login-footer">
+				<p>技术支持：4001-566-177</p>
+				<p>2016 拾联（厦门）信息科技有限公司 闽ICP备13011374号-1</p>
+			</footer>
+		</div>
+		<script type="text/javascript" src="../static/js/lib/jquery.min.js" ></script>
+		<script type="text/javascript" src="../static/js/login.js" ></script>
+	</body>
+
+</html>

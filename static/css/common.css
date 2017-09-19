@@ -1,0 +1,238 @@
+body{
+    font-family: '新宋体';
+    min-width: 1020px;
+}
+.whole-masker{
+    width: 100%;
+    height: 100%;
+    /*background: black;*/
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    display: none;
+}
+.title{
+    background: #3d4961;
+    color: white;
+    height: 27px;
+    line-height: 30px;
+    text-indent:10px;
+}
+.log-off{
+    padding: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.log-off:hover{
+    color:#00aaee;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+button:active{
+    outline: none;
+}
+.nav-menus{
+    background: #e6eaf2;
+    height: 46px;
+    line-height: 46px;
+    padding-left: 20px;
+}
+.nav-menus > ul > li{
+    width: 15%;
+    list-style-type: none;
+    float: left;
+}
+.nav-menus > ul > li span{
+    display: block;
+    float: left;
+}
+.nav-menus > ul > li .nav-text{
+    padding:5px;
+    cursor: pointer;
+}
+.cancel{
+    margin-left: 5px;
+}
+.search-icon{
+    position: absolute;
+    z-index: 8;
+    top: 5px;
+    left: 3px;
+    cursor: pointer;
+}
+.search-icon + input{
+    text-indent: 25px;
+}
+
+.no-padding{
+    padding-left: 0;
+}
+.background-black{
+    background: black;
+}
+.display-block{
+    display: block;
+}
+.margin-left{
+    margin-left: 15px;
+}
+.layer{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    border:1px solid #3D4961;
+    padding-left: 0;
+    background: white;
+    z-index: 10;
+    animation: fade-in 0.8s;
+    animation-fill-mode: forwards;
+    display: none;
+    opacity: 0;
+}
+
+.layer1{
+    position: absolute;
+    width:480px;
+    top: 25%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    border:1px solid #3D4961;
+    padding-left: 0;
+    background: white;
+    z-index: 10;
+    animation: fade-in 0.8s;
+    animation-fill-mode: forwards;
+    display: none;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    0%{opacity:0;transform:scale(0.8)}
+    50%{opacity:1;transform:scale(1)}
+    100%{opacity:1;transform:scale(1)}
+}
+.layer-header{
+    background: #3D4961;
+    color: white;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+.layer-content{
+    width: 300px;
+}
+.layer-content input:not([type='radio']):not([type='checkbox']):not([type='file']){
+    margin-top:10px;
+    width: 70%;
+    height: 30px;
+    border-radius: 3px;
+    border:1px solid #c4c4c4;
+    text-indent: 5px;
+    background: #eeeeee;
+}
+
+.layer-header > span{
+    display: block;
+    float: left;
+}
+.layer-content .dropdown{
+    position: absolute;
+    left: 260px;
+    top: 55px;
+}
+.layer-content .dropdown-menu{
+    left:-174px;
+    width: 204px;
+    top: 23px;
+    max-height: 155px;
+    overflow: auto;
+}
+.layer-content input[type=radio]{
+    margin: 20px  5px 0 5px;
+}
+.layer-content .btn{
+    width: 100px;
+    padding: 5px;
+    margin:25px 0 20px 0;
+}
+.layer-content .btn:first-child{
+    margin-right: 15px;
+}
+.close-layer{
+    cursor: pointer;
+}
+.delete-live .layer-content{
+    margin-bottom: 20px;
+}
+.input{
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    text-indent: 5px;
+    background: #eeeeee;
+}
+.text-overflow{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.btn-long{
+    padding: 4px 25px;
+}
+.slide-down{
+    position: absolute;
+}
+.small-font{
+    font-size: 12px;
+}
+
+.big-menu{
+    left: 14%;
+    position:absolute;
+    line-height: 30px;
+    max-height: 200px;
+    overflow: auto;
+    width: 246px;
+}
+.admin-add-account .layer-content .dropdown-menu{
+    width: 248px;
+    margin-top: 137px;
+}
+.no-margin{
+    margin: 0;
+}
+.search-close{
+    position: absolute;
+    top: 10px;
+    left: 185px;
+    z-index: 9;
+    display: none;
+    cursor: pointer;
+}
+
+.search-close1{
+    position: absolute;
+    top: 10px;
+    right:5px;
+    z-index: 9;
+    display: none;
+    cursor: pointer;
+}
+.text-blue{
+    color: #00aaee;
+}
+.dropdown-toggle img{
+    cursor: pointer;
+}

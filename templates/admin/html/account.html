@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html id="mainContainer">
+
+	<head>
+		<title>hello world!</title>
+
+		<link rel="stylesheet" type="text/css" href="../../../static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/account.css">
+
+	</head>
+
+	<body>
+		<div class="container content col-sm-offset-1" style="margin-top: 30px;">
+			<div class="col-xs-6">
+				<button class="btn btn-info" id="add_account_btn" data-toggle="modal" data-target="#addUserModal">添加</button>
+				<button class="btn btn-default margin-left" id="delete_account_btn" disabled>删除</button>
+				<button class="btn btn-default margin-left" id="unbinding_btn" disabled>解绑设备</button>
+			</div>
+			<div class="col-xs-4 text-right no-padding">
+				<button class="btn btn-default" @click=importClick()>批量导入</button>
+				<button class="btn btn-default " @click=downloadClick()>下载模板</button>
+			</div>
+			<div class="col-xs-2">
+				<div class="input-group">
+					<span class="search-icon" id="search">
+		                    <img src="../../../static/img/btn_search_n.png" @click=searchList()
+		                         onmouseover="searchEnter()" onmouseout="searchLeave()" @mouseleave="searchLeave()">
+		                </span>
+					<input type="text" class="form-control" size="25" id="searchValue" onfocus="searchFoucs()">
+					<img src="../../../static/img/btn_sign_empty_n.png" class="search-close1" onclick="emptySearch()">
+				</div>
+			</div>
+			<table class="table table-hover text-center">
+				<thead>
+					<tr style="background: rgb(243, 243, 243); border: 1px solid rgb(221, 221, 221);">
+						<th>
+							<input type="checkbox"> 全选
+						</th>
+						<th style="text-align: center;">账号</th>
+						<th>昵称</th>
+						<th>手机号</th>
+						<th>组织架构</th>
+						<th>绑定设备</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody id="table_list">
+
+				</tbody>
+			</table>
+			<div class="col-xs-12 text-center">
+				<ul id="pagination" style="font-family:'微软雅黑'"></ul>
+			</div>
+
+			<!-- 添加账号弹框 -->
+			<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		        <div class="modal-dialog">
+		        	<div class="modal-content">
+		                <div class="modal-header" style="background:#242833;color:#ffffff;padding:8px">
+	                        <button type="button" class="close" style="color:#ffffff;opacity:2;outline:none" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                        <h4 class="modal-title" id="addUserModalLabel">添加账号</h4>
+	                    </div>
+		            <div class="modal-body">
+	            	<p style="margin-top: 15px">账号:
+	            		<input type="text" name="add-account" style="width:80%" id="add-account" placeholder="4-18个字符，字母/数字/下划线">
+	            	</p>
+	            	<p  style="margin-top: 15px">昵称:
+	            		<input type="text" name="add-name" style="width:80%" id="add-name" placeholder="4-18个字符，字母/数字/下划线">
+	            	</p>
+	            	<p  style="margin-top: 15px">密码:
+	            		<input type="text" name="add-pwd" style="width:80%" id="add-pwd" placeholder="4-18个字符，字母/数字/下划线">
+	            	</p>
+	            	<p  style="margin-top: 15px">手机:
+	            		<input type="text" name="add-phone" style="width:80%" id="add-phone">
+	            	</p>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	                <button type="button" class="btn btn-primary">提交更改</button>
+	            </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+		
+        
+
+        <script type="text/javascript " src="../../../static/js/lib/jquery.min.js "></script>
+        <script type="text/javascript " src="../../../static/js/lib/bootstrap.min.js "></script>
+        <script type="text/javascript " src="../../../static/js/lib/bootstrap-paginator.js "></script>
+		<script type="text/javascript " src="../js/account.js "></script>
+	</body>
+</html>

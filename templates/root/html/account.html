@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频会议后台管理系统</title>
+    <link rel="stylesheet" type="text/css"  href="../../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/common.css">
+</head>
+<body>
+<div class="container col-xs-12" id="mainContainer">
+	<div>
+		<div class="col-xs-10">
+			<button class="btn btn-info" id="rootAdd" @click=clickAddUser() data-toggle="modal" data-target="#addUserModal">添加账号</button>
+			<button class="btn btn-default" id="rootDel" disabled @click=clickDelUser()>删除账号</button>
+		</div>
+        <div class="col-xs-2">
+			<div class="input-group">
+            	<span class="search-icon" id="search">
+					<img src="../../../static/img/btn_search_n.png" @click=searchUserList()>		
+            	</span>
+            	<input type="text" class="form-control" size="25" id="searchValue" >
+            </div>
+        </div>
+	</div>
+	<!--数据表-->
+	<div class="container col-xs-12">
+		<table class="table table-striped">
+			<thead>
+				<tr style="background:#F5F5F5;color:#808080">
+					<th><input type="checkbox" name="check-box" id="check-all" />全选</th>
+					<th>账号</th>
+					<th>昵称</th> 
+					<th>手机号</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody id="tbody-root-account">
+
+			</tbody>
+		</table>
+	</div>
+	<!--分页-->
+	<div class="col-xs-12 text-center" >
+	    <ul class="pagination pagination-sm" id="pagination">
+			<li><a href="#" style="margin-left:10px">&lt;</a></li>
+  			<li><a href="#" style="margin-left:10px">1</a></li>
+    		<li><a href="#" style="margin-left:10px">2</a></li>
+    		<li><a href="#" style="margin-left:10px">3</a></li>
+    		<li><a href="#" style="margin-left:10px">...</a></li>
+    		<li><a href="#" style="margin-left:10px">&gt;</a></li>
+		</ul>
+	</dir>
+
+	<!--添加账号-->
+	<div class="modal fade" id="addUserModal" tabindex="="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true"> 
+		<div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header" style="background:#242833;color:#ffffff;padding:8px">
+	                <div>
+	                <button type="button" class="close" style="color:#ffffff;opacity:2;outline:none" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="addUserModalLabel">添加账号</h4>
+	                </div>
+	            </div>
+	            <div class="modal-body">
+	            	<p style="margin-top: 15px">账号:
+	            		<input type="text" name="add-account" style="width:80%" id="add-account" placeholder="4-18个字符，字母/数字/下划线">
+	            	</p>
+	            	<p  style="margin-top: 15px">昵称:
+	            		<input type="text" name="add-name" style="width:80%" id="add-name" placeholder="4-18个字符，字母/数字/下划线">
+	            	</p>
+	            	<p  style="margin-top: 15px">密码:
+	            		<input type="text" name="add-pwd" style="width:80%" id="add-pwd" placeholder="4-18个字符，字母/数字/下划线">
+	            	</p>
+	            	<p  style="margin-top: 15px">手机:
+	            		<input type="text" name="add-phone" style="width:80%" id="add-phone">
+	            	</p>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	                <button type="button" class="btn btn-primary">提交更改</button>
+	            </div>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal -->
+	</div>
+</div>
+</body>
+
+<script src="../../../static/js/lib/jquery.min.js" ></script>
+<script src="../../../static/js/lib/bootstrap.min.js"></script>
+<script src="../js/account.js"></script>

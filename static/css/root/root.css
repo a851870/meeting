@@ -1,0 +1,16 @@
+@import url("../../font/iconfont.css");
+@import url("../base.css");
+.root,.admin{height: 100vh;width: 100vw;font-family: "黑体";font-size: 12px;position: relative;}
+.header{position: absolute;top: 0px;width: 100vw; height:34px;background-color:#00AAEE;line-height: 34px;color: #fff;}
+.headLeft{float:left;padding-left: 20px;cursor: pointer;}
+.headRigth{float: right;padding-right: 20px;}
+.headRigth li{float: left;padding-left:20px;cursor: pointer;}
+.main{position: absolute;top: 34px;bottom: 0;width:100%;}
+.main .wrapper{height: 100%;padding-left: 232px;position: relative;}
+.nav{position: absolute;top: 0;left: 0;height: 100%;width: 232px;background-color: #2A323D;}
+.con{height: 100%;}
+.navList{width: 100%;font-size: 13px;color: #fff;line-height: 42px}
+.navList li{height: 42px;padding-left: 40px;cursor: pointer;position: relative;}
+.navList li.on{background-color: #1B2027;}
+.navList li i{position: absolute;top:0px;left:16px;}
+

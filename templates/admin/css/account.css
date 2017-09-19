@@ -1,0 +1,15 @@
+.account_list{
+	color: red;
+}
+
+.content > .table > tbody > tr > td{
+	text-align: center;
+    line-height: 40px;
+}
+.content > .table > thead > tr > th{
+    border-bottom: 0;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    font-weight: bold;
+   border: none;
+}

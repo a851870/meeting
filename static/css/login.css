@@ -1,0 +1,51 @@
+/*登录页面css*/
+@import url("../font/iconfont.css");
+@import url("base.css");
+body,button,input{font-family: "黑体"!important; }
+.active{display: block!important;}
+.login{height: 100vh;width: 100vw;background-color: #2D95E4;position: relative;min-height: 650px;background: url(../img/backdrop.png) no-repeat;}
+.container{width: 360px;margin: 0 auto;}
+.login-main{width: 360px;height: 360px;padding-top: 170px;}
+.login-main .login-logo{height: 90px;width: 90px;margin: 0 auto;background:url(../img/Logo.png) no-repeat;}
+.login-form{margin-top: 25px;}
+.form-list {padding-left:60px ;}
+.form-list .item{width: 239px;margin-bottom:12px;border-radius:4px;position: relative;box-sizing: border-box;}
+
+.form-list .error{border: 1px solid #F84D4D;}
+.form-list .item:hover{-moz-box-shadow:0px 3px 5px #333333; -webkit-box-shadow:0px 3px 5px #333333; box-shadow:0px 3px 5px #333333;transition: all .5s;}
+.form-list .item:hover .avatar{color:#00AAEE;}
+.form-list .item .cue,.form-list .validate .cue{color: white;position: absolute;left: 250px;top: 8px;font-size:12px ;width: 120px;}
+.form-list .item .cue i,.form-list .validate .cue i{color: red;}
+.form-list .item>input,.form-list .item .avatar,.form-list .item .purge{float: left;background-color: #FFFFFF;height: 34px;}
+.form-list .item .avatar{width: 34px; text-align: center;line-height: 34px;font-size: 22px;color: #999999;border-right:1px solid #999999;border-bottom-left-radius:4px;border-top-left-radius:4px;}
+.form-list input{width: 170px;outline:none;padding-left:10px ;font-size: 11px;}
+.form-list input::-webkit-input-placeholder{font-size:11px;}
+.form-list .item .purge{width: 22px;text-align: center;line-height: 34px;font-size:15px;border-bottom-right-radius:4px;border-top-right-radius:4px;color: #999999;cursor: pointer;}
+.form-list .validate {width: 238px; height: 34px;position: relative;}
+.form-list .validate img{cursor: pointer;}
+.form-list .validate img,.form-list .validate>input{width: 109px;border-radius:4px ;float: left;height: 34px;}
+.form-list .entry {margin-top:30px ;}
+.form-list .entry button{color: white;width: 238px;background-color: #97D3FF;height: 34px;border: 0;border-radius:4px ;}
+.form-list .entry .disabled{pointer-events: none;cursor: default;background-color: #555555;}
+.form-list .pwd{margin-top:10px;width: 238px;color: white;font-size: 11px;}
+.form-list .pwd span{cursor: pointer;}
+.login-pop{position:absolute;width: 100vw;height: 100vh;top: 0;left: 0;display: none;}
+.popBox{margin-top: 240px;background: red;background-color: white;}
+.popBox .title{font-size:11px ;height: 24px;color: white;line-height: 24px;text-align: center;border: .5px solid #fff;border-bottom: 0; background-color:#2A323D ;box-sizing: border-box;margin-bottom:20px ;}
+.popBox .title span{float: right;cursor: pointer;}
+.popBox .header{text-align: center;font-size: 12px;margin-bottom:29px ;}
+.popBox .step ,.popForm{margin-left:30px ;font-size: 12px;}
+.popBox .step {margin-bottom: 27px;}
+.popBox .step li{float: left;width: 144px;height: 35px;background-color: #2AABD2;line-height: 35px;text-align: center;}
+.popForm{width: 300px;}
+.popForm p ,.popForm input{float: left;}
+.popForm p{width:60px;height: 30px;line-height: 30px;text-align: right;margin-right: 10px;}
+.popForm input{margin-top:3px ; border: 1px solid rgb(204,204,204);height: 25px;box-sizing: border-box;padding-left: 10px;background-color: rgb(238,238,238);border-radius:4px ;width: 217px;margin-right: auto;}
+.popForm .popForm-item{height: 30px;margin-bottom: 8px; display: none;}
+.popForm i{position: absolute;right: 17px;top: 7px;font-size: 15px;cursor: pointer;color: rgb(152,152,152);}
+.popForm img{float: right;width: 90px;margin-right: 14px;}
+.popForm button{float: right;background-color: rgb(56,163,240);border: 0;color: white;font-size: 11px;margin: 3px 14px 0 0 ;width: 100px;height: 26px;border-radius:6px ;}
+.popUpDown{margin: 40px 0 24px 100px;height: 28px;width: 220px;}
+.popUpDown button{width: 80px;border: 1px solid rgb(206,206,206);background-color: white;height: 28px;border-radius:5px ;float: left;font-size: 11px;}
+.login-footer{position: absolute;bottom: 10px;width: 374px;margin-left: -7px;}
+.login-footer p{font-size: 12px; color: #AAC8EB;width: 374px;text-align: center;height: 22px;line-height: 22px;letter-spacing:1px;}
